@@ -7,10 +7,22 @@
   "sessions": {
     "default": [
       {
+        "name": "git",
+        "icon": "logo-github",
+        "color": "terminal.ansiWhite",
+        "autoExecuteCommands": true,
+        "commands": [
+          "clear"
+        ]
+      },
+      {
         "name": "all",
         "autoExecuteCommands": true,
         "icon": "person",
-        "color": "terminal.ansiGreen"
+        "color": "terminal.ansiGreen",
+        "commands": [
+          "clear"
+        ]
       },
       {
         "name": "empty",
@@ -18,16 +30,8 @@
         "color": "terminal.ansiBlue",
         "autoExecuteCommands": true,
         "commands": [
-          "cd backend"
-        ]
-      },
-      {
-        "name": "git",
-        "icon": "logo-github",
-        "color": "terminal.ansiWhite",
-        "autoExecuteCommands": true,
-        "commands": [
-          "cd backend"
+          "cd backend",
+          "clear"
         ]
       },
       {
@@ -36,7 +40,8 @@
         "color": "terminal.ansiYellow",
         "autoExecuteCommands": true,
         "commands": [
-          "cd backend"
+          "cd backend",
+          "clear"
         ]
       },
       {
@@ -45,7 +50,8 @@
         "color": "terminal.ansiCyan",
         "autoExecuteCommands": true,
         "commands": [
-          "cd backend"
+          "cd backend",
+          "clear"
         ]
       },
       {
@@ -54,7 +60,8 @@
         "color": "terminal.ansiBlue",
         "autoExecuteCommands": true,
         "commands": [
-          "cd backend"
+          "cd backend",
+          "clear"
         ]
       },
       {
@@ -63,7 +70,8 @@
         "color": "terminal.ansiBlue",
         "autoExecuteCommands": true,
         "commands": [
-          "cd backend"
+          "cd backend",
+          "clear"
         ]
       },
       {
@@ -72,7 +80,8 @@
         "icon": "person",
         "color": "terminal.ansiGreen",
         "commands": [
-          "cd frontend"
+          "cd frontend",
+          "clear"
         ]
       }
     ]
