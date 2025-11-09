@@ -1,0 +1,80 @@
+{
+  "$schema": "https://cdn.statically.io/gh/nguyenngoclongdev/cdn/main/schema/v11/terminal-keeper.json",
+  "theme": "tribe",
+  "active": "default",
+  "activateOnStartup": true,
+  "keepExistingTerminals": false,
+  "sessions": {
+    "default": [
+      {
+        "name": "all",
+        "autoExecuteCommands": true,
+        "icon": "person",
+        "color": "terminal.ansiGreen"
+      },
+      {
+        "name": "empty",
+        "icon": "primitive-dot",
+        "color": "terminal.ansiBlue",
+        "autoExecuteCommands": true,
+        "commands": [
+          "cd backend"
+        ]
+      },
+      {
+        "name": "git",
+        "icon": "logo-github",
+        "color": "terminal.ansiWhite",
+        "autoExecuteCommands": true,
+        "commands": [
+          "cd backend"
+        ]
+      },
+      {
+        "name": "shell",
+        "icon": "output",
+        "color": "terminal.ansiYellow",
+        "autoExecuteCommands": true,
+        "commands": [
+          "cd backend"
+        ]
+      },
+      {
+        "name": "tests",
+        "icon": "checklist",
+        "color": "terminal.ansiCyan",
+        "autoExecuteCommands": true,
+        "commands": [
+          "cd backend"
+        ]
+      },
+      {
+        "name": "docker",
+        "icon": "symbol-function",
+        "color": "terminal.ansiBlue",
+        "autoExecuteCommands": true,
+        "commands": [
+          "cd backend"
+        ]
+      },
+      {
+        "name": "docker",
+        "icon": "symbol-function",
+        "color": "terminal.ansiBlue",
+        "autoExecuteCommands": true,
+        "commands": [
+          "cd backend"
+        ]
+      },
+      {
+        "name": "frontend",
+        "autoExecuteCommands": true,
+        "icon": "person",
+        "color": "terminal.ansiGreen",
+        "commands": [
+          "cd frontend"
+        ]
+      }
+    ]
+  }
+}
