@@ -18,7 +18,9 @@
         "color": "terminal.ansiBlue",
         "autoExecuteCommands": true,
         "commands": [
-          "cd backend"
+          "cd backend",
+          "source venv/bin/activate",
+          "clear"
         ]
       },
       {
@@ -27,7 +29,9 @@
         "color": "terminal.ansiWhite",
         "autoExecuteCommands": true,
         "commands": [
-          "cd backend"
+          "cd backend",
+          "source venv/bin/activate",
+          "clear"
         ]
       },
       {
@@ -36,7 +40,9 @@
         "color": "terminal.ansiYellow",
         "autoExecuteCommands": true,
         "commands": [
-          "cd backend"
+          "cd backend",
+          "source venv/bin/activate",
+          "clear"
         ]
       },
       {
@@ -45,7 +51,9 @@
         "color": "terminal.ansiCyan",
         "autoExecuteCommands": true,
         "commands": [
-          "cd backend"
+          "cd backend",
+          "source venv/bin/activate",
+          "clear"
         ]
       },
       {
@@ -54,7 +62,9 @@
         "color": "terminal.ansiBlue",
         "autoExecuteCommands": true,
         "commands": [
-          "cd backend"
+          "cd backend",
+          "source venv/bin/activate",
+          "clear"
         ]
       },
       {
@@ -63,7 +73,9 @@
         "color": "terminal.ansiBlue",
         "autoExecuteCommands": true,
         "commands": [
-          "cd backend"
+          "cd backend",
+          "source venv/bin/activate",
+          "clear"
         ]
       },
       {
@@ -72,7 +84,8 @@
         "icon": "person",
         "color": "terminal.ansiGreen",
         "commands": [
-          "cd frontend"
+          "cd frontend",
+          "clear"
         ]
       }
     ]
