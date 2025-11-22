@@ -56,28 +56,26 @@
           "clear"
         ]
       },
-      {
-        "name": "docker",
-        "icon": "symbol-function",
-        "color": "terminal.ansiBlue",
-        "autoExecuteCommands": true,
-        "commands": [
-          "cd backend",
-          "source venv/bin/activate",
-          "clear"
-        ]
-      },
-      {
-        "name": "docker",
-        "icon": "symbol-function",
-        "color": "terminal.ansiBlue",
-        "autoExecuteCommands": true,
-        "commands": [
-          "cd backend",
-          "source venv/bin/activate",
-          "clear"
-        ]
-      },
+      [
+        {
+          "name": "docker",
+          "icon": "symbol-function",
+          "color": "terminal.ansiBlue",
+          "autoExecuteCommands": true,
+          "commands": [
+            "clear"
+          ]
+        },
+        {
+          "name": "docker",
+          "icon": "symbol-function",
+          "color": "terminal.ansiBlue",
+          "autoExecuteCommands": true,
+          "commands": [
+            "clear"
+          ]
+        }
+      ],
       {
         "name": "frontend",
         "autoExecuteCommands": true,
