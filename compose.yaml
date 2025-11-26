@@ -1,10 +1,10 @@
 services:
-  django:
+  backend:
     build: ./backend
     ports:
       - "8000:8000"
     volumes:
-      - ./backend/:/app
+      - ./backend/:/app/backend
     env_file:
       - .env
     container_name: django-web
@@ -15,7 +15,17 @@ services:
       db:
         condition: service_healthy
         restart: true
-
+  frontend:
+    build: ./frontend
+    container_name: frontend
+    volumes:
+      - ./frontend/:/app/frontend
+      - /app/frontend/node_modules
+    ports:
+      - "3000:3000"
+    tty: true
+    depends_on:
+      - backend
 
   db:
     image: postgres:17-alpine
