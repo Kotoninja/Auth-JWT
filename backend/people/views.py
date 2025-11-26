@@ -1,7 +1,7 @@
 from rest_framework import generics
 from rest_framework import permissions 
 from django.contrib.auth.models import User
-from people.serializer import PeopleSerializer
+from people.serializers import PeopleSerializer
 
 class PeopleViewSet(generics.ListAPIView):
     queryset = User.objects.all()
