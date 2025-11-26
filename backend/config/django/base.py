@@ -36,7 +36,8 @@ INSTALLED_APPS = (
         "django.contrib.staticfiles",
     ]
     + [  # My apps
-        "people"
+        "people",
+        "user"
     ]
     + [  # Third-party packages
         "rest_framework",
