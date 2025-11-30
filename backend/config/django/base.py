@@ -37,15 +37,17 @@ INSTALLED_APPS = (
     ]
     + [  # My apps
         "people",
-        "user"
+        "user",
     ]
     + [  # Third-party packages
         "rest_framework",
         "rest_framework_simplejwt",
+        "corsheaders",
     ]
 )
 
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -130,6 +132,8 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
+# Only for development testing - never use in production
+CORS_ALLOW_ALL_ORIGINS = True
 
 from config.settings.rest_framework import *
 from config.settings.simple_jwt import *

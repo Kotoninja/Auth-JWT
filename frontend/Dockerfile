@@ -1,6 +1,8 @@
 FROM node:25-alpine
 
-WORKDIR /app/frontend
+RUN mkdir /app
+
+WORKDIR /app
 
 COPY package.json .
 

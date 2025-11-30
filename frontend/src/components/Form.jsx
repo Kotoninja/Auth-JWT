@@ -9,8 +9,7 @@ function Form({ route, method }) {
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
 
-    const name = method === "login" ? "Login" : "Registration"
-
+    const name = method === "login" ? "Login" : "Registration";
 
     async function handleSubmit(e) {
         setLoading(true);
@@ -21,14 +20,14 @@ function Form({ route, method }) {
             if (method === "login") {
                 localStorage.setItem(ACCESS_TOKEN, response.data.access);
                 localStorage.setItem(REFRESH_TOKEN, response.data.refresh);
-                navigate("/")
+                navigate("/");
             } else {
-                navigate("/login/")
+                navigate("/login/");
             }
         } catch (error) {
-            alert(error)
+            alert(error);
         } finally {
-            setLoading(false)
+            setLoading(false);
         }
     }
 
@@ -37,14 +36,10 @@ function Form({ route, method }) {
         <form onSubmit={handleSubmit} className="form-container">
             <h1>{name}</h1>
             <input type="text" className="form-input" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Username" />
-            <input type="text" className="form-input" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
+            <input type="password" className="form-input" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
             <button type="submit">Submit</button>
         </form>
-
-
-
     </>)
-
 }
 
 export default Form
