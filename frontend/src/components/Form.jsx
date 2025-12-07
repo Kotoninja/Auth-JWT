@@ -2,13 +2,16 @@ import { useState } from "react";
 import api from "../api";
 import { useNavigate } from "react-router-dom";
 import { ACCESS_TOKEN, REFRESH_TOKEN } from "../constants";
+import { useContext } from "react";
+import UserContext from "../context/UserContext";
 
 function Form({ route, method }) {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
-
+    const context = useContext(UserContext);
+    
     const name = method === "login" ? "Login" : "Registration";
 
     async function handleSubmit(e) {
@@ -20,6 +23,7 @@ function Form({ route, method }) {
             if (method === "login") {
                 localStorage.setItem(ACCESS_TOKEN, response.data.access);
                 localStorage.setItem(REFRESH_TOKEN, response.data.refresh);
+                context?.fetchUser()
                 navigate("/");
             } else {
                 navigate("/login/");
