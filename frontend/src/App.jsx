@@ -5,6 +5,7 @@ import NotFound from './pages/NotFound';
 import Register from './pages/Register';
 import ProtectedRoute from "./components/ProtectedRoute";
 import {UserProvider} from "./context/UserContext";
+import "./styles/App.css";
 
 function Logout() {
   localStorage.clear()
