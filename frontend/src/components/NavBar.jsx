@@ -35,7 +35,7 @@ export default function ButtonAppBar() {
   };
 
   const profileTitles = [["Profile", <AccountCircleIcon />], ["Settings", <SettingsIcon />]].map((title) =>
-    <ListItemButton disabled>
+    <ListItemButton href={`/profile/${context?.user?.id}`} >
       <ListItemIcon sx={{ minWidth: "35px" }}>
         {title[1]}
       </ListItemIcon>
@@ -45,7 +45,7 @@ export default function ButtonAppBar() {
 
   return (
     <Box sx={{ flexGrow: 1, mb: 2 }}>
-      <AppBar position="static" sx={{ paddingX: 10, borderRadius: "4px", background: blue[500] }}>
+      <AppBar position="static" sx={{ paddingX: 10, background: blue[500] }}>
         <Toolbar>
           <Button href="/" color="inherit" sx={{ fontSize: fontSizeText }}>Home</Button>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>

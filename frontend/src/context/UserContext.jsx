@@ -17,7 +17,7 @@ export const UserProvider = ({ children }) => {
                 return;
             }
 
-            api.get("/api/user/profile")
+            api.get("/api/user/user-information")
                 .then(function (response) {
                     const userData = response.data;
                     setUser(userData);

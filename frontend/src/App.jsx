@@ -4,7 +4,9 @@ import Home from './pages/Home';
 import NotFound from './pages/NotFound';
 import Register from './pages/Register';
 import ProtectedRoute from "./components/ProtectedRoute";
-import {UserProvider} from "./context/UserContext";
+import UserProfile from "./pages/UserProfile";
+import { UserProvider } from "./context/UserContext";
+
 import "./styles/App.css";
 
 function Logout() {
@@ -22,16 +24,17 @@ function App() {
     <UserProvider>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={
-            <ProtectedRoute>
-              <Home />
-            </ProtectedRoute>
-          }
-          />
+          {/* User Auth*/}
           <Route path="/login/" element={<Login />} />
           <Route path="/logout/" element={<Logout />} />
           <Route path="/register/" element={<RegisterAndLogout />} />
+          {/* End User Auth */}
+          
+          <Route path="/" element={<ProtectedRoute><Home /></ProtectedRoute>} />
+          <Route path="/profile/:id" element={<ProtectedRoute><UserProfile /></ProtectedRoute>} />
+          
           <Route path="*" element={<NotFound />} />
+          <Route path="/404" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </UserProvider>

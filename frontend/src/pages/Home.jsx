@@ -2,9 +2,9 @@ import React from 'react'
 import Layout from "../components/Layout"
 import Box from '@mui/material/Box'
 import { useState, useEffect } from 'react'
-import Skeleton from '@mui/material/Skeleton'
+// import Skeleton from '@mui/material/Skeleton'
+import CircularProgress from '@mui/material/CircularProgress'
 import api from '../api'
-
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
@@ -29,14 +29,16 @@ const Home = () => {
   return (
     <Layout>
       <Box sx={{ display: "flex", justifyContent: "center" }}><b>Peoples</b></Box>
-      <Box sx={{ mt: 2, display: "flex", flexGrow: 1, minHeight: 0 }}>
+      <Box sx={{ mt: 2 }}>
         {loading ?
-          (<Skeleton variant="rounded" animation="wave" width={"100%"} height="calc(100vh - 120px)" />
+          (<Box sx={{ display: "flex", justifyContent: "center" }}>
+            <CircularProgress sx={{ display: "flex", justifyContent: "center" }} color="inherit" />
+          </Box>
           ) : (
             data && Array.isArray(data) && (
               <ul>
                 {data.map((person, index) => (
-                  <li key={index}>{JSON.stringify(person)}</li>
+                  <li key={index}><a href={`profile/${person?.id}`}>{person?.username}</a></li>
                 ))}
               </ul>
             ))}
