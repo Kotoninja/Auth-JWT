@@ -30,8 +30,8 @@ function App() {
           <Route path="/register/" element={<RegisterAndLogout />} />
           {/* End User Auth */}
           
-          <Route path="/" element={<ProtectedRoute><Home /></ProtectedRoute>} />
-          <Route path="/profile/:id" element={<ProtectedRoute><UserProfile /></ProtectedRoute>} />
+          <Route path="/" element={<Home />} />
+          <Route path="/profile/:id" element={<UserProfile />} />
           
           <Route path="*" element={<NotFound />} />
           <Route path="/404" element={<NotFound />} />

@@ -17,7 +17,7 @@ services:
         restart: true
   frontend:
     build: ./frontend
-    container_name: frontend
+    container_name: frontend-jwt
     volumes:
       - ./frontend/:/app
       - /app/frontend/node_modules

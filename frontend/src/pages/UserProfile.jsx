@@ -20,7 +20,7 @@ const UserProfile = () => {
         const response = await api.get(`/api/people/${params.id}`);
         setData(response.data);
       } catch (err) {
-        console.log(err)
+        // console.log(err)
         navigate("/404", { state: false })
       } finally {
         setLoading(false);
